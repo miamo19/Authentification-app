@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h4>logIn</h4>
+{% for mge in messages %}
+    {{mge}}
+{% endfor %}
+    <form method="post" action="/login">
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="Enter your username" required>
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" name=password id="password" placeholder="************" required>
+        <br><br>
+        <button type="submit">Connect</button>
+    </form>
+{% endblock %}

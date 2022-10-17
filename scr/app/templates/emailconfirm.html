@@ -1,0 +1,12 @@
+{% autoescape off %}
+
+Welcome to Mia~code login system
+Hello {{name}}
+Confirm your address Email and activate your account by clicking on the below link 👇👇👇👇
+
+link: https//{{domain}}{% url 'activate' uidb64=uid token=token %}
+
+Hyacinthe: Digital System managers;
+Regards.
+
+{% endautoescape %}
